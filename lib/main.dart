@@ -13,9 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: ScreenUtilInit(
-            designSize: const Size(360, 800), // Set your design dimensions
-            minTextAdapt: true,
-            child: SplashScreen()));
+        home: Material(
+      child: ScreenUtilInit(
+          designSize: const Size(360, 800), // Set your design dimensions
+          minTextAdapt: true,
+          child: SplashScreen()),
+    ));
   }
 }
