@@ -1,5 +1,7 @@
 import 'package:app_one/constant/myTheme.dart';
 import 'package:app_one/homepage/view/tabs.widegt.dart';
+import 'package:app_one/search/view/search.page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -183,6 +185,12 @@ class _HomePageState extends State<HomePage> {
                           height: 36.h,
                           width: 288.w,
                           child: TextFormField(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                      builder: (context) => SearchPage()));
+                            },
                             controller: controller,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.search),
